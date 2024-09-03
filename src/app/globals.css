@@ -1,0 +1,310 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Dana"; /*400*/
+    src: url("/fonts/Dana/woff2/DanaFaNum-Regular.woff2");
+  }
+  @font-face {
+    font-family: "Dana Medium"; /*500*/
+    src: url("/fonts/Dana/woff2/DanaFaNum-Medium.woff2");
+  }
+  @font-face {
+    font-family: "Dana DemiBold"; /*600*/
+    src: url("/fonts/Dana/woff2/DanaFaNum-DemiBold.woff2");
+  }
+  @font-face {
+    font-family: "Morabba Light"; /*300*/
+    src: url("/fonts/Morabba/woff2/Morabba-Light.woff2");
+  }
+  @font-face {
+    font-family: "Morabba Medium"; /*500*/
+    src: url("/fonts/Morabba/woff2/Morabba-Medium.woff2");
+  }
+  @font-face {
+    font-family: "Morabba Bold"; /*700*/
+    src: url("/fonts/Morabba/woff2/Morabba-Bold.woff2");
+  }
+  body {
+    @apply dark:bg-catalan-900 bg-brown-50;
+  }
+}
+
+@layer components {
+  .icon {
+    @apply w-12 h-12 cursor-pointer;
+  }
+  .icon-lg {
+    @apply w-8 h-8 cursor-pointer;
+  }
+  .icon-md {
+    @apply w-6 h-6 cursor-pointer;
+  }
+  .icon-sm {
+    @apply w-5 h-5 cursor-pointer;
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .nav-link {
+    @apply flex items-center justify-start gap-3 my-2 py-1.5 mr-4 text-lg lg:text-xl text-brown-100 dark:text-brown-100 font-MorabbaLight tracking-tighter leading-[56px] transition-colors;
+  }
+  .nav-link:hover,
+  .nav-link.active {
+    @apply text-catalan-800 bg-brown-100 rounded-s-lg px-3;
+  }
+  .header-link {
+    @apply flex items-center justify-start gap-3 my-1 py-1 mr-4 text-lg lg:text-xl text-catalan-800 dark:text-brown-100 font-MorabbaMedium tracking-tighter leading-[56px] transition-colors;
+  }
+  .header-link:hover,
+  .header-link.active-link {
+    @apply text-catalan-400;
+  }
+  .mobile-navlink {
+    @apply flex items-center gap-x-2 px-3;
+  }
+  .mobile-navlink span {
+    @apply text-lg lg:text-xl text-catalan-800 dark:text-brown-100 font-MorabbaMedium tracking-tighter leading-[56px];
+  }
+  .mobile-navlink.active {
+    @apply bg-catalan-200/50 text-catalan-600 dark:text-brown-100 rounded-md py-2;
+  }
+  /*btn*/
+  .btn-gradient {
+    @apply font-MorabbaLight transition-colors hover:bg-gradient-to-r from-catalan-500 to-catalan-800 border border-catalan-600 hover:text-brown-100 rounded-lg px-2 py-1;
+  }
+  .btn-gradient-red {
+    @apply font-MorabbaLight transition-colors hover:bg-gradient-to-r from-rose-500 to-rose-800 border border-rose-800 hover:text-brown-100 rounded-lg px-2 py-1;
+  }
+  .btn-plus-icon {
+    @apply flex items-center justify-center gap-1 w-fit;
+  }
+  .btn-form {
+    @apply btn-gradient font-MorabbaLight hover:text-brown-100 text-sm md:text-base rounded-lg w-fit;
+  }
+  .btn-icon {
+    @apply text-catalan-800 dark:text-brown-100 hover:text-catalan-400 dark:hover:text-catalan-300 transition-colors;
+  }
+  .btn-catalan {
+    @apply text-base font-MorabbaLight transition-colors hover:bg-gradient-to-r from-catalan-500 to-catalan-800 border border-catalan-600 bg-catalan-800 text-brown-100 rounded-lg px-2 py-1;
+  }
+  /*text*/
+  .text-title {
+    @apply text-3xl tracking-normal font-MorabbaBold;
+  }
+  .text-subtitle {
+    @apply text-xl tracking-tight font-MorabbaMedium;
+  }
+  .text-regular {
+    @apply text-base tracking-tight font-Dana;
+  }
+  .text-link {
+    @apply text-xs tracking-tight font-DanaMedium;
+  }
+  .text-title-morabba {
+    @apply text-sm md:text-lg font-MorabbaMedium;
+  }
+  .text-sm-morabba {
+    @apply text-sm tracking-tight font-MorabbaLight;
+  }
+  .text-base-morabba {
+    @apply text-base tracking-tight font-MorabbaMedium;
+  }
+  .section-title {
+    @apply font-MorabbaMedium text-2xl md:text-4xl;
+  }
+  .section-subtitle {
+    @apply font-MorabbaLight text-lg md:text-2xl mt-1.5;
+  }
+  .section-link {
+    @apply flex items-center md:gap-x-px py-2 pr-3 pl-1 hover:bg-catalan-300/20 rounded-lg transition-colors font-MorabbaLight text-base md:text-xl tracking-tight;
+  }
+  /*form*/
+  .form-row {
+    @apply flex flex-col items-start md:flex-row md:gap-5 md:items-center md:justify-between;
+  }
+  .form-col-50,
+  .custom-row {
+    @apply flex flex-col items-start w-full mb-2;
+  }
+  .form-col-50 input,
+  .form-col-50 textarea,
+  .custom-row input,
+  .custom-row textarea,
+  .form-col-50 select {
+    @apply w-full my-1 py-2 px-4 border border-catalan-600 outline-none rounded-lg bg-transparent text-sm font-Dana tracking-tighter;
+  }
+
+  .form-col-50 label,
+  .custom-row label,
+  .form-col-50 legend {
+    @apply text-catalan-800 text-sm lg:text-base font-MorabbaMedium mb-0.5;
+  }
+  .form-input {
+    @apply outline-none bg-transparent border border-catalan-600 rounded-lg px-3 py-2 lg:py-1.5 text-sm font-Dana tracking-tighter shadow-custom;
+  }
+  /*market*/
+  .baner {
+    @apply bg-center bg-cover bg-no-repeat w-full h-[50vw] relative;
+  }
+  .slider-height {
+    height: calc((100% - 300px) / 2);
+  }
+
+  .product-shadow {
+    box-shadow: rgb(253, 186, 116) 1.95px 1.95px 2.6px;
+  }
+  .border-shadow {
+    box-shadow: rgba(253, 186, 116, 0.4) 0px 5px,
+      rgba(253, 186, 116, 0.3) 0px 10px, rgba(253, 186, 116, 0.2) 0px 15px,
+      rgba(253, 186, 116, 0.1) 0px 20px, rgba(253, 186, 116, 0.05) 0px 25px;
+  }
+  .shape {
+    position: absolute;
+    top: -24px;
+    left: -30px;
+    width: 0;
+    height: 100px;
+    border-bottom: 10px solid transparent;
+    border-top: none;
+    border-left: 20px solid #356169;
+    border-right: 10px solid #356169;
+  }
+  .shape span {
+    writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: white;
+    padding-top: 10px;
+    font-size: 0.8rem;
+  }
+  /*scroll to top*/
+  .button,
+  .buttonVisible {
+    position: fixed;
+    bottom: 2rem;
+    left: 1.5rem;
+    border-radius: 100%;
+    background: #356169;
+    border: 0;
+    width: 48px;
+    height: 48px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    outline: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
+    padding: 0.7rem 0.8rem 0rem;
+    transition-duration: 200ms;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 50;
+  }
+  .button {
+    opacity: 0;
+  }
+  .buttonVisible {
+    opacity: 1 !important;
+  }
+  /*table*/
+  .cms-table {
+    @apply w-full my-4;
+  }
+  .cms-table thead {
+    @apply bg-brown-200/45 text-catalan-800;
+  }
+  .cms-table th {
+    @apply p-2 font-MorabbaMedium text-sm md:text-base;
+  }
+  .cms-table tr {
+    @apply border-b-2 border-brown-100;
+  }
+  .cms-table td {
+    @apply p-2 text-xs md:text-sm text-center text-catalan-800 font-DanaMedium;
+  }
+  .cms-table td button {
+    @apply flex-center;
+  }
+  .cms-btn {
+    @apply flex-center max-w-fit lg:w-fit sm:w-20 p-1 text-sm font-MorabbaLight my-1 border-none outline-none rounded-md bg-brown-200/45 text-catalan-800 cursor-pointer transition-all;
+  }
+  .cms-btn:hover {
+    @apply bg-catalan-800 text-white;
+  }
+  .cms-btn.delete:hover,
+  .cms-btn.ban:hover {
+    @apply bg-rose-800 text-white;
+  }
+  .cms-image {
+    @apply w-10 h-10 md:w-16 md:h-16 rounded-full border border-catalan-800 mx-auto;
+  }
+  .cms-cover {
+    @apply w-10 h-12 md:w-16 md:h-20 border border-catalan-800 mx-auto;
+  }
+  /*Modal*/
+  .modal {
+    @apply fixed inset-0 z-10 bg-gray-800/70 w-full h-full flex-center opacity-0 invisible transition-all;
+  }
+  .modal.active {
+    @apply visible opacity-100;
+  }
+  .modal-wrapper {
+    @apply p-10 bg-brown-100 rounded-md relative;
+  }
+  .modal-wrapper h1 {
+    @apply text-xl font-DanaMedium text-catalan-800;
+  }
+  .modal-wrapper p {
+    @apply text-base font-Dana text-catalan-800;
+  }
+  .modal-btns {
+    @apply flex-center gap-3 mt-5;
+  }
+  .modal-btn {
+    @apply border-none outline-none py-1 px-3 rounded-lg text-brown-100 text-lg font-MorabbaLight w-fit;
+  }
+  .accept-btn {
+    @apply bg-catalan-800;
+  }
+  .reject-btn {
+    @apply bg-rose-800;
+  }
+
+  .rate {
+    display: flex;
+    gap: 2px;
+    padding-top: 0.2rem;
+    direction: ltr;
+    font-size: 1.1rem;
+    color: gray;
+  }
+  .rate svg:hover,
+  .rate svg:hover ~ svg {
+    color: orange; /* رنگ هنگام هاور */
+  }
+
+  .cart-btn {
+    @apply flex-center w-fit sm:w-20 p-1.5 text-sm font-MorabbaLight my-1 border-none outline-none rounded-md bg-brown-100/45 text-catalan-800 dark:text-brown-100 cursor-pointer transition-all;
+  }
+  .cart-btn:hover {
+    @apply bg-catalan-800 text-white;
+  }
+  .cart-btn.delete:hover {
+    @apply bg-rose-800 text-white;
+  }
+  .toast {
+    @apply text-sm font-MorabbaLight;
+  }
+  .badge {
+    @apply text-brown-100 text-sm font-MorabbaLight px-3 py-1 rounded-md;
+  }
+  .user-panel-card {
+    @apply flex items-center justify-between mb-2 border border-catalan-300 hover:bg-catalan-100 transition-all cursor-pointer px-2 py-3 rounded-md;
+  }
+}

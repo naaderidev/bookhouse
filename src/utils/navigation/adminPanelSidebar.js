@@ -1,0 +1,96 @@
+import {
+  HiOutlineUser,
+  HiOutlineChatBubbleLeftRight,
+  HiOutlineChartBar,
+  HiOutlineTicket,
+  HiOutlineSwatch,
+  HiOutlineClipboardDocumentList,
+  HiOutlineUserGroup,
+  HiOutlineCircleStack,
+  HiOutlineHeart,
+  HiOutlineArrowsUpDown,
+  HiOutlineEnvelope,
+  HiOutlineAtSymbol,
+  HiOutlineClipboardDocument,
+} from "react-icons/hi2";
+
+export const adminSidebarItems = [
+  {
+    id: 1,
+    title: "پیشخوان",
+    href: "/admin-panel",
+    icon: <HiOutlineChartBar className="icon-md" />,
+  },
+  {
+    id: 2,
+    title: "محصولات",
+    href: "/admin-panel/products",
+    icon: <HiOutlineCircleStack className="icon-md" />,
+  },
+  {
+    id: 3,
+    title: "کاربران",
+    href: "/admin-panel/users",
+    icon: <HiOutlineUserGroup className="icon-md" />,
+  },
+  {
+    id: 4,
+    title: "سفارش ها",
+    href: "/admin-panel/orders",
+    icon: <HiOutlineClipboardDocument className="icon-md" />,
+  },
+  {
+    id: 5,
+    title: "تیکت ها",
+    href: "/admin-panel/tickets",
+    icon: <HiOutlineTicket className="icon-md" />,
+  },
+  {
+    id: 6,
+    title: "دیدگاه ها",
+    href: "/admin-panel/comments",
+    icon: <HiOutlineChatBubbleLeftRight className="icon-md" />,
+  },
+  {
+    id: 7,
+    title: "تخفیف ها",
+    href: "/admin-panel/discounts",
+    icon: <HiOutlineSwatch className="icon-md" />,
+  },
+  {
+    id: 8,
+    title: "خبرنامه",
+    href: "/admin-panel/newsletter",
+    icon: <HiOutlineAtSymbol className="icon-md" />,
+  },
+  {
+    id: 9,
+    title: "پیام ها",
+    href: "/admin-panel/contact",
+    icon: <HiOutlineEnvelope className="icon-md" />,
+  },
+  {
+    id: 10,
+    title: "مبادله",
+    href: "/admin-panel/exchange",
+    icon: <HiOutlineArrowsUpDown className="icon-md" />,
+  },
+  {
+    id: 11,
+    title: "علاقه مندی ها",
+    href: "/admin-panel/wishlist",
+    icon: <HiOutlineHeart className="icon-md" />,
+  },
+  {
+    id: 12,
+    title: "حساب کاربری",
+    href: "/admin-panel/account",
+    icon: <HiOutlineUser className="icon-md" />,
+  },
+  // {
+  //   id: 13,
+  //   title: "تنظیمات",
+  //   href: "/admin-panel/setting",
+  //   icon: <HiOutlineCog6Tooth className="icon-md" />,
+  // },
+];
