@@ -24,6 +24,13 @@ export default function DesktopNavbar() {
             {link.title}
           </Link>
         ))}
+        <Link href="/about" className="flex items-center gap-2 header-link">
+          <span className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-catalan-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-catalan-500"></span>
+          </span>
+          <span>راهنما</span>
+        </Link>
       </div>
     </nav>
   );
